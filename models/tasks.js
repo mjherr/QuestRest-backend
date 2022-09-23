@@ -1,6 +1,6 @@
 //DEPENDENCIES 
 const { Sequelize, DataTypes, Model } = require('sequelize')
-const sequelize = new Sequelize(process.env.PG_URI)
+// const sequelize = new Sequelize(process.env.PG_URI)
 
 //MODEL
 class Task extends Model { }
@@ -12,6 +12,7 @@ Task.init({
     },
     title: {
         type: DataTypes.STRING, // short description of the task ie, read a book, mop the kitchen, fold clothes
+        primaryKey: true,
         allowNull: false
     },
     duration: {
@@ -27,9 +28,12 @@ Task.init({
     },
     activity: {
         type: DataTypes.STRING, // either mental of physical
-    }
-
-
+    },
+}, {
+    sequelize,
+    modelName: 'Task',
+    tableName: 'task',
+    timestamps: false
 })
 
 //EXPORT
