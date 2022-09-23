@@ -14,13 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Task.init({
-    task_type: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     title: {
       type: DataTypes.STRING,
       primaryKey: true,
+      allowNull: false
+    },
+    task_type: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     duration: {
