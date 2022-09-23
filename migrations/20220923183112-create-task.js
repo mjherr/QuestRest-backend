@@ -2,19 +2,13 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('tasks', {
-      Task_id: {
+      title: {
         allowNull: false,
-        autoIncrement: true,
-        type: Sequelize.INTEGER,
-        allowNull: false
+        primaryKey: true,
+        type: Sequelize.STRING
       },
       task_type: {
         type: Sequelize.STRING,
-        allowNull: false
-      },
-      title: {
-        type: Sequelize.STRING,
-        primaryKey: true,
         allowNull: false
       },
       duration: {
@@ -32,7 +26,7 @@ module.exports = {
       activity: {
         type: Sequelize.STRING,
         allowNull: false
-      },
+      }
     });
   },
   async down(queryInterface, Sequelize) {

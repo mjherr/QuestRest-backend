@@ -14,15 +14,34 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Task.init({
-    task_type: DataTypes.STRING,
-    title: DataTypes.STRING,
-    duration: DataTypes.INTEGER,
-    locale: DataTypes.STRING,
-    work_load: DataTypes.STRING,
-    activity: DataTypes.STRING
+    task_type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    title: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+      allowNull: false
+    },
+    duration: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    locale: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    work_load: {
+      type: DataTypes.STRING,
+    },
+    activity: {
+      type: DataTypes.STRING,
+    },
   }, {
     sequelize,
     modelName: 'Task',
+    tableName: 'tasks',
+    timestamps: false
   });
   return Task;
 };
