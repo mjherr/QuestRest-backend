@@ -5,19 +5,17 @@ const { User } = db
 
 
 //FIND ALL USERS
-// users.get('/', async (req, res) => {
-//     console.log(req.params.id)
-//     try {
-//         const foundUsers = await User.findAll()
-//         res.status(200).json(foundUsers)
-//     } catch (error) {
-//         res.status(500).json(error)
-//     }
-// })
+users.get('/', async (req, res) => {
+    try {
+        const foundUsers = await User.findAll()
+        res.status(200).json(foundUsers)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
 
 //FIND SPECIFIC USER
 users.get('/', async (req, res) => {
-    console.log(req.params.id)
     try {
         const foundUser = await User.findAll({
             where: { task_type: 'quest' }
