@@ -11,18 +11,6 @@ module.exports = {
       user_name: {
         type: Sequelize.STRING,
         allowNull: false
-      },
-      quests: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      rests: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      completed_tasks: {
-        type: Sequelize.STRING,
-        allowNull: false
       }
     });
   },

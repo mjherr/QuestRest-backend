@@ -9,7 +9,8 @@ module.exports = {
         duration: 30,         //amount of time in minutes
         locale: 'outside',    //inside or outside
         work_load: 'heavy',   //heavy or light
-        activity: 'physical'  //physical or mental
+        activity: 'physical',  //physical or mental
+        user_id: 'Kyle'
       },
       {
         title: 'read a book',
@@ -17,7 +18,8 @@ module.exports = {
         duration: 60,       //amount of time in minutes
         locale: 'inside',    //inside or outside
         work_load: 'light',   //heavy or light
-        activity: 'mental'  //physical or mental
+        activity: 'mental',  //physical or mental
+        user_id: 'Kyle'
 
       },
       {
@@ -26,8 +28,8 @@ module.exports = {
         duration: 45,       //amount of time in minutes
         locale: 'inside',    //inside or outside
         work_load: 'heavy',   //heavy or light
-        activity: 'mental'  //physical or mental
-
+        activity: 'mental',  //physical or mental
+        user_id: 'Kyle'
       },
       {
         title: 'go for a walk',
@@ -35,8 +37,8 @@ module.exports = {
         duration: 60,       //amount of time in minutes
         locale: 'outside',    //inside or outside
         work_load: 'light',   //heavy or light
-        activity: 'physical'  //physical or mental
-
+        activity: 'physical',  //physical or mental
+        user_id: 'Kyle'
       }]);
   },
 

@@ -37,6 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     activity: {
       type: DataTypes.STRING,
     },
+    user_id: {
+      type: DataTypes.INTEGER
+    }
   }, {
     sequelize,
     modelName: 'Task',

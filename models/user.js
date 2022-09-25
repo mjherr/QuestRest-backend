@@ -23,18 +23,6 @@ module.exports = (sequelize, DataTypes) => {
     user_name: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    quests: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    rests: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    completed_tasks: {
-      type: DataTypes.STRING,
-      allowNull: false
     }
   }, {
     sequelize,
