@@ -26,6 +26,10 @@ module.exports = {
       activity: {
         type: Sequelize.STRING,
         allowNull: false
+      },
+      user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false
       }
     });
   },

@@ -25,6 +25,12 @@ app.get('/', (res, req) => {
     req.send('Hello World')
 })
 
+//CONTROLLERS
+const taskController = require('./controllers/task_controller')
+app.use('/tasks', taskController)
+const userController = require('./controllers/user_controller')
+app.use('/users', userController)
+
 //LISTEN
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port: ${process.env.PORT}`)
