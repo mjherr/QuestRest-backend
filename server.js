@@ -12,16 +12,24 @@ app.use(express.urlencoded({ extended: false }))
 const sequelize = new Sequelize(process.env.PG_URI)
 
 
+// try {
+//     sequelize.authenticate()
+//     console.log(`Connected with Sequelize a ${process.env.PG_URI}`)
+// } catch (err) {
+//     console.log(`Unable to connect to PG: ${err}`)
+// }
+
+
 //ROOT
 app.get('/', (res, req) => {
     req.send('Hello World')
 })
 
-const userController = require('./controllers/user_controller')
-app.use('/users', userController)
-
+//CONTROLLERS
 const taskController = require('./controllers/task_controller')
 app.use('/tasks', taskController)
+const userController = require('./controllers/user_controller')
+app.use('/users', userController)
 
 //LISTEN
 app.listen(process.env.PORT, () => {

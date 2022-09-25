@@ -12,3 +12,17 @@ tasks.get('/', async (req, res) => {
         res.status(500).json(error)
     }
 })
+
+tasks.get('/:id', async (req, res) => {
+    try {
+        const foundUserTasks = await Task.findAll({
+            where: { user_id: req.params.id }
+        })
+        res.status(200).json(foundUserTasks)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
+
+module.exports = tasks
