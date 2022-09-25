@@ -5,21 +5,12 @@ module.exports = {
     await queryInterface.bulkInsert('users', [
       {
         user_name: 'Kyle',
-        quests: 'none',
-        rests: 'none',
-        completed_tasks: 'none'
       },
       {
         user_name: 'Mary',
-        quests: 'none',
-        rests: 'none',
-        completed_tasks: 'none'
       },
       {
         user_name: 'Maria',
-        quests: 'none',
-        rests: 'none',
-        completed_tasks: 'none'
       }
     ])
     /**

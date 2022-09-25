@@ -10,7 +10,7 @@ module.exports = {
         locale: 'outside',    //inside or outside
         work_load: 'heavy',   //heavy or light
         activity: 'physical',  //physical or mental
-        user_id: 'Kyle'
+        user_id: 1
       },
       {
         title: 'read a book',
@@ -19,7 +19,7 @@ module.exports = {
         locale: 'inside',    //inside or outside
         work_load: 'light',   //heavy or light
         activity: 'mental',  //physical or mental
-        user_id: 'Kyle'
+        user_id: 1
 
       },
       {
@@ -29,7 +29,7 @@ module.exports = {
         locale: 'inside',    //inside or outside
         work_load: 'heavy',   //heavy or light
         activity: 'mental',  //physical or mental
-        user_id: 'Kyle'
+        user_id: 1
       },
       {
         title: 'go for a walk',
@@ -38,7 +38,7 @@ module.exports = {
         locale: 'outside',    //inside or outside
         work_load: 'light',   //heavy or light
         activity: 'physical',  //physical or mental
-        user_id: 'Kyle'
+        user_id: 1
       }]);
   },
 
