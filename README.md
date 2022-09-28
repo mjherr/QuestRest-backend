@@ -13,6 +13,10 @@ idea/change log
 9/25/2022-
     each created task should have the user id as a foriegn key
     might need to change how we id the tasks, might run into issues with having a unique primary key if more than one person has the same task
+    
+9/27/2022-
+    rebuilt tables to make associations easier.  Might not end up needing all of the columns in the short run but added incase we get to them before dead line.
+    Attempting heroku deployment for the postgres db
 
 
 
