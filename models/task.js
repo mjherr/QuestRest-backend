@@ -14,9 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Task.init({
+    task_id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.SERIAL
+    },
     title: {
       type: DataTypes.STRING,
-      primaryKey: true,
       allowNull: false
     },
     task_type: {
@@ -36,9 +41,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     activity: {
       type: DataTypes.STRING,
-    },
-    user_id: {
-      type: DataTypes.INTEGER
     }
   }, {
     sequelize,

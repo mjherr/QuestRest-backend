@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: DataTypes.INTEGER
+      type: DataTypes.SERIAL
     },
     task_id: {
       type: DataTypes.INTEGER,
@@ -30,6 +30,19 @@ module.exports = (sequelize, DataTypes) => {
     },
     task_start: {
       type: DataTypes.DATE,
+      allowNull: false
+    },
+    is_completed: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+      allowNull: false
+    },
+    task_end: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    task_duration: {
+      type: DataTypes.INTEGER,
       allowNull: false
     }
   }, {

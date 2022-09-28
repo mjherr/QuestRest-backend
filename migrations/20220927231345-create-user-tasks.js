@@ -20,6 +20,19 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false
       },
+      is_completed: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false
+      },
+      task_end: {
+        type: Sequelize.DATE,
+        allowNull: false
+      },
+      task_duration: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      }
     });
   },
   async down(queryInterface, Sequelize) {
