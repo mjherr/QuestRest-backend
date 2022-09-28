@@ -1,4 +1,5 @@
 //DEPENDENCIES
+const express = require('express')
 const users = require('express').Router()
 const db = require('../models')
 const { User } = db

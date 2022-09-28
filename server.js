@@ -4,7 +4,6 @@ const app = express()
 const { Sequelize } = require('sequelize')
 
 
-
 //MIDDLEWARE
 require('dotenv').config()
 app.use(express.json())
