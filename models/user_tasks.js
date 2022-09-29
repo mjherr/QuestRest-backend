@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: DataTypes.SERIAL
+      type: DataTypes.INTEGER
     },
     task_id: {
       type: DataTypes.INTEGER,

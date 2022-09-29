@@ -9,12 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ User_Tasks, Task }) {
-      User.hasMany(User_Tasks, {
-
-      })
+    static associate({ User_Task, Task }) {
+      User.hasMany(User_Task, { foreignKey: 'user_task', as: 'task1' })
       User.belongsToMany(Task, {
-        through: User_Tasks
+        through: User_Task
       })
     }
   }
@@ -23,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
-      type: DataTypes.SERIAL
+      type: DataTypes.INTEGER
     },
     user_name: {
       type: DataTypes.STRING,
