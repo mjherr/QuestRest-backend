@@ -31,7 +31,7 @@ const userController = require('./controllers/user_controller')
 app.use('/users', userController)
 
 //LISTEN
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Listening on port: ${process.env.PORT}`)
 })
 
