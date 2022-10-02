@@ -3,6 +3,7 @@ const express = require('express')
 const tasks = require('express').Router()
 const db = require('../models')
 const { Task } = db
+const { Op } = require('sequelize')
 
 //FIND ALL TASKS
 tasks.get('/', async (req, res) => {
@@ -33,7 +34,7 @@ tasks.post('/', async (req, res) => {
             message: 'Successfully created a new task',
             data: newTask
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
@@ -49,7 +50,7 @@ tasks.put('/:id', async (req, res) => {
         res.status(200).json({
             message: `Successfully updated ${updatedTasks} task(s)`
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
@@ -65,7 +66,7 @@ tasks.delete('/:id', async (req, res) => {
         res.status(200).json({
             message: `Successfully deleted ${deletedTasks} task(s)`
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
