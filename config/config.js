@@ -12,7 +12,6 @@ module.exports = {
         "require": true,
         "rejectUnauthorized": false
       }
-    },
-    port: 5432
+    }
   }
 }
