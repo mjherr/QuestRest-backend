@@ -18,9 +18,9 @@ app.get('/', (res, req) => {
 })
 
 //CONTROLLERS
+const userController = require('./controllers/user_controller')
 const taskController = require('./controllers/task_controller')
 app.use('/tasks', taskController)
-const userController = require('./controllers/user_controller')
 app.use('/users', userController)
 
 //LISTEN
