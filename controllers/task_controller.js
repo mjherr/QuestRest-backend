@@ -7,12 +7,9 @@ const { Op } = require('sequelize')
 
 //FIND ALL TASKS
 tasks.get('/', async (req, res) => {
+    console.log(req.params)
     try {
-        const foundTasks = await Task.findAll({
-            where: {
-                task_id: { [Op.like]: `%${req.query.task_id ? req.query.task_id : ''}` }
-            }
-        })
+        const foundTasks = await Task.findAll()
         res.status(200).json(foundTasks)
     } catch (error) {
         res.status(500).json(error)
