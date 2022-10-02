@@ -1,21 +1,15 @@
 //DEPENDENCIES
 const express = require('express')
 const app = express()
-const { Sequelize } = require('sequelize')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 
 
 //MIDDLEWARE
 require('dotenv').config()
 app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
-
-
-// try {
-//     sequelize.authenticate()
-//     console.log(`Connected with Sequelize a ${process.env.PG_URI}`)
-// } catch (err) {
-//     console.log(`Unable to connect to PG: ${err}`)
-// }
+app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 
 //ROOT
