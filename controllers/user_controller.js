@@ -35,7 +35,7 @@ users.post('/', async (req, res) => {
             message: 'Successfully created a new user',
             data: newUser
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
@@ -51,7 +51,7 @@ users.put('/:id', async (req, res) => {
         res.status(200).json({
             message: `Successfully updated ${updatedUsers} user(s)`
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
@@ -67,7 +67,7 @@ users.delete('/:id', async (req, res) => {
         res.status(200).json({
             message: `Successfully deleted ${deletedUsers} user(s)`
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })

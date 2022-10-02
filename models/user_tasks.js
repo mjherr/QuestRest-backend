@@ -17,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
 
       })
     }
-
   }
   User_Tasks.init({
     user_task_id: {

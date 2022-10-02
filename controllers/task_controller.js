@@ -1,13 +1,10 @@
 //DEPENDENCIES
-const express = require('express')
 const tasks = require('express').Router()
 const db = require('../models')
 const { Task } = db
-const { Op } = require('sequelize')
 
 //FIND ALL TASKS
 tasks.get('/', async (req, res) => {
-    console.log(req.params)
     try {
         const foundTasks = await Task.findAll()
         res.status(200).json(foundTasks)
