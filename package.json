@@ -24,7 +24,9 @@
     "express": "^4.18.1",
     "express-react-views": "^0.11.0",
     "pg": "8.6.0",
-    "pg-hstore": "^2.3.4",
-    "sequelize": "^6.23.1"
+    "pg-hstore": "^2.3.4"
+  },
+  "devDependencies": {
+    "sequelize": "^6.23.2"
   }
 }
