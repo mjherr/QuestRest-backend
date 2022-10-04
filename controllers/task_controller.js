@@ -7,6 +7,7 @@ const { Task } = db
 tasks.get('/', async (req, res) => {
     try {
         const foundTasks = await Task.findAll()
+        console.log(foundTasks)
         res.status(200).json(foundTasks)
     } catch (error) {
         res.status(500).json(error)
@@ -16,7 +17,7 @@ tasks.get('/', async (req, res) => {
 tasks.get('/:id', async (req, res) => {
     console.log(req.params.id)
     try {
-        const foundUserTasks = await Task.findAll({
+        const foundUserTasks = await Task.findOne({
             where: { task_id: req.params.id }
         })
         res.status(200).json(foundUserTasks)
